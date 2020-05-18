@@ -1,11 +1,8 @@
-// Assignment code here
-
 // pick password length prompt
 var pwlen = window.prompt("Please pick a password length between 8 to 128.");
 
 // verify length
 while (pwlen < 8 || pwlen > 128) {
-
     var pwlen = window.prompt("Incorrect: Please a number for a password length between 8 to 128.");
 }
 
@@ -28,48 +25,47 @@ var upprRand = "";
 var numRand = "";
 var speclRand = "";
 
+//while loop to make passwork string
 while (pwlen > currentstr.length) {
 
-    //lowercase randomized
-    if (lowercaseConfirm === true) {
-        var lwerCaseVar = (
-            Math.floor(Math.random() * 26));
-        var lowerstr = "abcdefghijklmnopqrstuvwxyz";
-        var lwerRand = lowerstr.charAt(lwerCaseVar, lwerCaseVar);
-    }
+  //lowercase randomized
+  if (lowercaseConfirm === true) {
+    var lwerCaseVar = (
+    Math.floor(Math.random() * 26));
+    var lowerstr = "abcdefghijklmnopqrstuvwxyz";
+    var lwerRand = lowerstr.charAt(lwerCaseVar, lwerCaseVar);
+   }
 
-    //uppercase randomized
-    if (uppercaseConfirm === true) {
-        var upprCaseVar = (
-            Math.floor(Math.random() * 26));
-        var upperstr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var upprRand = upperstr.charAt(upprCaseVar, upprCaseVar);
-    }
+  //uppercase randomized
+  if (uppercaseConfirm === true) {
+    var upprCaseVar = (
+    Math.floor(Math.random() * 26));
+    var upperstr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var upprRand = upperstr.charAt(upprCaseVar, upprCaseVar);
+  }
 
-    // function to generate a random numeric value
-    if (numConfirm === true) {
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * Math.floor(max));
-        }
-        var numRand = (getRandomInt(9));
+  // function to generate a random numeric value
+  if (numConfirm === true) {
+    function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
     }
+    var numRand = (getRandomInt(9));
+  }
 
-    // function to generate a random special character
-    if (specialConfirm === true) {
-        var speclCaseVar = (
-            Math.floor(Math.random() * 22));
-        var speclStr = ".[]{}()<>*+-=!?^$|";
-        var speclRand = speclStr.charAt(speclCaseVar, speclCaseVar);
+  // function to generate a random special character
+  if (specialConfirm === true) {
+    var speclCaseVar = (
+    Math.floor(Math.random() * 22));
+    var speclStr = ".[]{}()<>*+-=!?^$|";
+    var speclRand = speclStr.charAt(speclCaseVar, speclCaseVar);
+  }
+  currentstr = (lwerRand + upprRand + numRand + speclRand + currentstr);
+  if (currentstr.length > pwlen) {
+    var generatePassword = function () {
+    return currentstr;          
     }
-
-    currentstr = (lwerRand + upprRand + numRand + speclRand + currentstr);
-
-    if (currentstr.length > pwlen) {
-        break;
-    }
+  }    
 };
-
-var password = currentstr;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");

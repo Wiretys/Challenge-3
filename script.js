@@ -29,7 +29,7 @@ var speclRand = "";
 while (pwlen > currentstr.length) {
 
   //lowercase randomized
-  if (lowercaseConfirm === true) {
+  if (lowercaseConfirm = true) {
     var lwerCaseVar = (
     Math.floor(Math.random() * 26));
     var lowerstr = "abcdefghijklmnopqrstuvwxyz";
@@ -37,7 +37,7 @@ while (pwlen > currentstr.length) {
    }
 
   //uppercase randomized
-  if (uppercaseConfirm === true) {
+  if (uppercaseConfirm = true) {
     var upprCaseVar = (
     Math.floor(Math.random() * 26));
     var upperstr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -45,7 +45,7 @@ while (pwlen > currentstr.length) {
   }
 
   // function to generate a random numeric value
-  if (numConfirm === true) {
+  if (numConfirm = true) {
     function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
     }
@@ -53,7 +53,7 @@ while (pwlen > currentstr.length) {
   }
 
   // function to generate a random special character
-  if (specialConfirm === true) {
+  if (specialConfirm = true) {
     var speclCaseVar = (
     Math.floor(Math.random() * 22));
     var speclStr = ".[]{}()<>*+-=!?^$|";
